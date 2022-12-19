@@ -1,0 +1,415 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Vollkorn', serif;
+  letter-spacing: 1.2px;
+}
+
+body{
+  display: flex;
+  background: #f8f8f3;
+  flex-direction: column;
+  align-items: center;
+}
+/* меню */
+.header_selection_menu{
+  box-shadow: 0 5px 10px 5px rgba(221, 221, 221, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  height: 8vh;
+  color: #fff;
+  background: #c40000;
+}
+
+.header_selection_menu a{
+  color: #fff;
+  text-decoration: none;  
+}
+
+#home{
+  width: 20vw;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}  
+
+#home a{
+  font-size: 1.5em;
+}
+
+#selection_menu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+  height: 80%;
+}
+
+.vl{
+  border-left: 2px solid #fff;
+  height: 3vh;
+}
+
+#selection_menu a{
+  font-size: 1.5em;
+  margin: 0 10px 0 10px;
+}
+
+/*форма обратной связи*/
+.feedback_form  {
+  position: absolute;
+  background: #f8f8f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  z-index: -1;
+  height: 100vh;
+}
+
+.main_form{
+  background: #fff;
+  padding: 50px;
+  width: 50vw;
+  height: 60vh;
+  box-shadow: 0 0 10px 5px #00000016;
+  z-index: 0;
+}
+
+.main_form h1{
+  font-size: 1.5em;
+  text-align: center;
+  margin: 40px 0 40px 0;
+  color: #000c;
+  font-family: 'Rubik', sans-serif;
+}
+
+.main_form form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+:focus {
+  outline: none;
+}
+
+.div_full_name{
+  width: 40%;
+  margin: 20px 0 20px 0;
+  position: relative;
+}
+
+.div_addres{
+  width: 40%;
+  margin: 20px 0 20px 0;
+  position: relative;
+}
+
+.div_email{
+  width: 40%;
+  margin: 20px 0 20px 0;
+  position: relative;
+}
+
+.div_tel{
+  width: 40%;
+  margin: 20px 0 40px 0;
+  position: relative;
+}
+
+input[type="tel"],
+input[type="email"],
+input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1.5px;
+  font-size: 1.1em;
+  padding-left: 10px;
+  height: 50px;
+}
+
+.input_shift_text{
+  border: 1px solid #ccc;
+  padding: 20px;
+  transition: 0.4s;
+  background: transparent;
+}
+
+.input_shift_text~.focus-border:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #820000;
+  transition: 0.3s;
+  top: auto;
+  bottom: 0;
+  right: auto;
+  left: 0;
+}
+
+.input_shift_text:focus~.focus-border:after,
+.has_content.input_shift_text~.focus-border:after{
+  width: 100%;
+  transition: 0.3s;
+}
+
+.input_shift_text~label {
+  position: absolute;
+  left: 10px;
+  width: 100%;
+  top: 15px;
+  color: #ccc;
+  transition: 0.3s;
+  z-index: -1;
+  letter-spacing: 1.5px;
+}
+.input_shift_text:focus~label,
+.has_content.input_shift_text~label{
+  top: -22px;
+  left: 10;
+  font-size: 1em;
+  color: #820000;
+  transition: 0.3s;
+}
+
+.btn_send{
+  font-family: 'Rubik', bold;
+  width: auto;
+  height: 7vh;
+  background-color: #c40000;
+  padding: 0 30px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  font-size: 0.9em;
+  transition-duration: 0.2s;
+}
+
+.btn_send:hover {
+    background-color: #fff;
+    color: #c40000;
+    border: 1px solid #c40000;
+}
+
+/*скрывающийся блок основного меню*/
+.block_menu{
+  position: absolute;
+  background: #A42020;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.menu{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu a{
+  color: #E6E6E6;
+  margin: 15px;
+  font-size: 3em;
+  text-decoration: none;
+}
+
+.line{
+    background: #E6E6E6;
+    width: 30vw;
+    height: 0.2vh;
+}
+
+/*форма персональных данных*/
+.personal_data  {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  z-index: -1;
+  height: 100vh;
+}
+
+.main_form{
+  background: #fff;
+  padding: 50px;
+  width: 50vw;
+  height: 60vh;
+  box-shadow: 0 0 10px 5px #00000016;
+  z-index: 0;
+}
+
+.main_form h1{
+  font-size: 1.5em;
+  text-align: center;
+  margin: 40px 0 40px 0;
+  color: #000c;
+  font-family: 'Rubik', sans-serif;
+}
+
+.main_form h2{
+  font-size: 1.3em;
+  text-align: center;
+  margin: 10px 0 40px 0;
+  color: #000c;
+  font-family: 'Rubik', sans-serif;
+}
+
+.main_form form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+:focus {
+  outline: none;
+}
+
+table {
+  width: 100%;
+  color: white;
+  height: 40vh;
+  font-size: 1.7em;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+td:first-child {
+  width: 35%;
+  background: #900;
+  padding: 10px 20px;
+}
+
+td:last-child{
+  background: #cf5b5b;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+td {
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: white;
+  background: #cf5b5b;
+}
+
+
+/* Новости */
+.block_news  {
+  justify-content: center;
+  margin-bottom: 7vh;
+  width: 80vw;
+  max-width: 100%;
+}
+
+.block_news h2{
+  margin: 20px;
+  text-align: center;
+  font-size: 3em;
+}
+
+.news{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news_info{
+  display: flex;
+  flex-direction: column;
+  background: white;
+  width: 75vw;
+  box-shadow: 0 0 10px 5px #00000016;
+  margin: 10px;
+  padding: 40px;
+}
+
+.title{
+  font-size: 1.5em;
+  padding-bottom: 20px;
+  letter-spacing: 3px;
+}
+
+.content{
+  line-height: 30px;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+}
+
+.date{
+  padding-top: 20px;
+  color: #919191;
+}
+
+@media screen and (max-width: 960px) {
+/* header */
+  .header_selection_menu{width: 80vw; height:6vh; }
+  #home a{font-size: 1.2em;}
+  #selection_menu{width: 50vw; justify-content: end}
+  #selection_menu a{font-size: 1.2em}
+/* news */
+  .block_news{width: 80vw;}
+  .news_info{width: 65vw;}
+/* feedback */
+  .main_form{padding: 0; width: 70vw; height: 55vh}
+  .main_form h1{font-size: 1em;  margin: 40px 0 20px 0;}
+  .div_full_name{width: 60%;margin: 20px 0 10px 0;}
+  .div_addres{width: 60%;margin: 20px 0 10px 0;}
+  .div_email{width: 60%;margin: 20px 0 10px 0;}
+  .div_tel{width: 60%;margin: 20px 0 40px 0;}
+  input[type="tel"],
+  input[type="email"],
+  input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1.2px;
+  padding-left: 10px;
+  height: 20px;}
+  .input_shift_text~label{letter-spacing: 1px; font-size: 0.8em}
+  .input_shift_text:focus~label,
+  .has_content.input_shift_text~label{font-size: 0.8em}
+  .btn_send{height: 5vh; width: 40vw; font-size: 0.8em}
+/* personal_data */
+
+}
+
+@media screen and (max-width: 400px) {
+/* header */
+  #home a{font-size: 1em;}
+  #selection_menu a{font-size: 1em}
+/* news */
+  .block_news{width: 80vw;}
+  .block_news h2{font-size: 2em}
+  .news_info{width: 65vw;}
+  .title{font-size: 1.4em}
+  .content{font-size: 1.2em}
+  .date{font-size: 1em}
+/* index */
+  .menu a{font-size: 2em;}
+  .line{width: 70vw;}
+/* feedback */
+  .main_form h1{font-size: 0.9em;  margin: 30px 0 20px 0;}
+  .input_shift_text~label{letter-spacing: 1px; font-size: 0.7em}
+  .input_shift_text:focus~label,
+  .has_content.input_shift_text~label{font-size: 0.7em}
+/* personal_data */
+  .main_form{width: 90vw; height: auto;}
+  .main_form h1{font-size: 1em;}
+  .main_form h2{font-size: 0.9em;}
+  table {font-size: 0.7em; width: 90%;}
+  td:first-child{width:30%; padding: 5px 10px;}
+  td:last-child{width: 80%; padding: 5px 10px;}
+  .btn_send{height: 5vh; width: 40vw; font-size: 0.8em; margin:15px;}
+}
